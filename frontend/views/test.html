@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href ="css/styles.css">
+  </head>
+  <body>
+
+    <h1>Welcome to our Home Page!</h1>
+    <h1> <%= title %> </h1>
+    <h2><b>Our normalized predictors in order are:<b></h2>
+    <ul>
+        <li>Mileage</li>
+        <li>City Fuel Economy</li>
+        <li>Engine Displacement</li>
+        <li>Horespower</li>
+        <li>Year</li>
+        <li>Number of Owners</li>
+        <li>Days On Market</li>
+    <ul>
+    <hr>
+    <div>
+     <form action="/" method="post">
+	     <label for="loadNum">Show Number of Entries</label>
+             <input type ="text" name="loadNum">
+	     <label for="Model_search">Car Model</label>
+             <input name="Model_search" onfocus="if (this.value=='Search Car Model...') this.value = ''" type="text" value="Search Car Model...">
+	     <input type="submit" name="submit_loadNum">
+    </form>
+    </div>
+    <hr>
+    <table id="Predicted Values">
+	<tr>
+
+		<th>Index</th>
+		<th>VIN</th>
+		<th>Car Make </th>
+		<th>Car Model</th>
+	    	<th>Predicted Values</th>
+	    	<th>Actual Value</th>
+		<th>Accuracy</th>
+		<th>Age</th>
+	</tr>
+	<% if(data.length != 0){
+		var i = 1;
+	   	data.forEach(function(data){
+	%>
+	<tr>
+		<td><%=i%></td>
+		<td><%=data.vin%></td>
+		<td><%=data.make%></td>
+		<td><%=data.model%></td>
+		<td><%=data.prediction%></td>
+		<td><%=data.price%></td>
+		<td><%=Math.abs(data.difference)%>%</td>
+		<td><%=data.age%></td>
+	</tr>
+	<% i++})%>
+
+	<% }else{ %>
+		<tr>
+			<td colspan="7">No Data Found</td>
+		</tr>
+	<% } %>
+    </table>
+
+
+    <form action="/" method="post">
+	    <input type="submit" name="loadMore" value="Load More">  
+    </form>
+  </body>
+</html>
+

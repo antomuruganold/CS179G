@@ -1,0 +1,13 @@
+[0;1;31m●[0m mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2021-12-01 04:34:54 UTC; 1min 42s ago
+    Process: 48821 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre [0;1;31m(code=exited, status=1/FAILURE)[0m
+
+Dec 01 04:34:53 ip-172-31-27-125 systemd[1]: [0;1;39m[0;1;31m[0;1;39mmysql.service: Control process exited, code=exited, status=1/FAILURE[0m
+Dec 01 04:34:53 ip-172-31-27-125 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmysql.service: Failed with result 'exit-code'.[0m
+Dec 01 04:34:53 ip-172-31-27-125 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start MySQL Community Server.[0m
+Dec 01 04:34:54 ip-172-31-27-125 systemd[1]: mysql.service: Scheduled restart job, restart counter is at 6.
+Dec 01 04:34:54 ip-172-31-27-125 systemd[1]: Stopped MySQL Community Server.
+Dec 01 04:34:54 ip-172-31-27-125 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmysql.service: Start request repeated too quickly.[0m
+Dec 01 04:34:54 ip-172-31-27-125 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmysql.service: Failed with result 'exit-code'.[0m
+Dec 01 04:34:54 ip-172-31-27-125 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start MySQL Community Server.[0m
